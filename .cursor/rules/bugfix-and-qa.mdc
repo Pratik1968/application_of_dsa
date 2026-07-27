@@ -1,0 +1,23 @@
+---
+description: How to investigate bugs and answer project questions
+alwaysApply: true
+---
+
+# Bugs & Q&A
+
+## Answering questions
+
+- Search the repo (`react-native/`, `server/`) before answering.
+- Cite files/symbols; say when something is not implemented yet (e.g. server still not scaffolded).
+- Prefer short, accurate answers over speculation.
+
+## Fixing bugs
+
+1. Reproduce from symptoms, logs, or failing tests.
+2. Find root cause (do not only mask symptoms).
+3. Apply the smallest correct fix.
+4. Note how to verify (command, screen, or request).
+
+## When information is missing
+
+Ask for: expected vs actual, steps, environment (iOS/Android/server), and relevant logs — then continue with best-effort search.

@@ -1,0 +1,36 @@
+---
+description: Core context for Application of DSA — always apply in this repo
+alwaysApply: true
+---
+
+# Application of DSA — Project Overview
+
+**Open-source** monorepo that shows **real-world applications** of data structures and algorithms — not toy leetcode dumps — on:
+
+| Path | Role |
+|------|------|
+| `react-native/` | Expo SDK 57 + TypeScript: routes in `src/app/`, DSA in `src/dsa/`, HTTP in `src/api/` |
+| `server/` | Python 3.11 + FastAPI (uv): routers in `app/api/`, DSA in `app/dsa/` |
+
+Both apps are scaffolded. Match tools already in lockfiles (`package-lock.json`, `uv.lock`).
+
+## Mission
+
+- Teach by **building useful features** where a DS/algorithm is the right tool.
+- Mirror concepts on **mobile and server** when it makes sense (same idea, different constraints).
+- Keep explanations in code comments / docs short and tied to the feature.
+
+## Agent priorities
+
+1. Answer from the codebase (search before assuming).
+2. Fix bugs with root cause + minimal change.
+3. Flag and fix security issues (auth, validation, secrets, injection).
+4. Prefer clarity and correctness over clever one-liners; name structures/algorithms explicitly.
+
+## Working style
+
+- Scoped changes; no drive-by refactors.
+- Put DSA logic in dedicated, testable modules; wire UI/API thinly around them.
+- Mobile: TypeScript. Server: Python. Do not invent a second backend stack.
+- Never commit secrets; use `.env.example` only.
+- Welcome contributor-friendly code: readable, documented why a structure was chosen.

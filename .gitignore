@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.venv/
+__pycache__/
+*.py[oc]
+*.egg-info/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.p12
+google-services.json
+GoogleService-Info.plist
+
+# Build / native
+dist/
+build/
+coverage/
+.expo/
+ios/Pods/
+android/.gradle/
+android/app/build/
+*.jsbundle
+
+# Logs & OS
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+.vscode/*
+!.vscode/extensions.json

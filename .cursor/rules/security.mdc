@@ -1,0 +1,18 @@
+---
+description: Security checklist for bugs, features, and reviews
+alwaysApply: true
+---
+
+# Security
+
+When adding features, fixing bugs, or reviewing code, check:
+
+1. **Authn/Authz** — protected routes require auth; users can only access their own resources.
+2. **Input** — validate and sanitize; reject unexpected types/sizes.
+3. **Injection** — no raw SQL/shell/HTML from user input.
+4. **Secrets** — no keys in source; rotate if ever committed.
+5. **Transport** — HTTPS in production; secure cookie / token storage on mobile (prefer secure storage over AsyncStorage for tokens).
+6. **Dependencies** — avoid unmaintained packages for crypto/auth.
+7. **Errors** — generic client messages; detailed logs server-side only.
+
+If asked for a "security review", prioritize findings by severity and propose concrete fixes.
