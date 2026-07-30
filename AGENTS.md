@@ -6,50 +6,47 @@ Guidance for AI agents in this **open-source** repository.
 
 We show **real applications of data structures and algorithms** in:
 
-- `react-native/` — Expo (TypeScript) mobile features and interactive demos
+- `react_native/` — Expo (TypeScript) mobile features and interactive demos
 - `server/` — FastAPI (Python) APIs and systems uses of the same ideas
 
 Goal: learners and contributors see *why* a heap, trie, graph, queue, etc. belongs in a real app — not isolated coding-challenge solutions.
 
+Licensed under MIT — see root [`LICENSE.md`](./LICENSE.md).
+
 | Side | Status / source of truth |
 |------|---------------------------|
-| Mobile | Expo SDK 57 — `react-native/package.json`, `react-native/AGENTS.md` |
+| Mobile | Expo SDK 57 — `react_native/package.json`, `react_native/AGENTS.md` |
 | Server | FastAPI + uv — `server/pyproject.toml`, `server/AGENTS.md` |
 
 ## Goals for agents
 
 | Goal | How |
 |------|-----|
-| Answer project questions | Search code; use Cursor rules + this file |
+| Answer project questions | Search code; use `CLAUDE.md` + this file |
 | Fix bugs | Root cause, minimal diff, how to verify |
-| Security | Follow `.cursor/rules/security.mdc` |
-| Teach via features | Follow `.cursor/rules/dsa-applications.mdc` |
-| Keep docs current | After code changes, use `.cursor/skills/update-docs-on-code-change/` |
+| Security | Follow the Security section in root `CLAUDE.md` |
+| Teach via features | Follow the "Real DSA applications" section in root `CLAUDE.md` |
+| Keep docs current | After code changes, use `.claude/skills/update-docs-on-code-change/` |
 
 ## Conventions
 
-- **Mobile:** TypeScript — DSA in `react-native/src/dsa/`; UI in `src/app` / `src/components`; HTTP via `src/api`.
+- **Mobile:** TypeScript — DSA in `react_native/src/dsa/`; UI in `src/app` / `src/components`; HTTP via `src/api`.
 - **Server:** Python 3.11+ / FastAPI / uv — DSA in `server/app/dsa/`; routers in `app/api/`; app in `app/main.py`.
 - Separate DSA cores from UI/HTTP wiring; name the structure/algorithm clearly.
 - No secrets in git (`.env.example` only).
-- Also read package AGENTS: `react-native/AGENTS.md`, `server/AGENTS.md`.
+- Also read package AGENTS: `react_native/AGENTS.md`, `server/AGENTS.md`.
 
-## Cursor rules
+## Claude Code context files
 
-- `project-overview.mdc` — always on
-- `dsa-applications.mdc` — always on
-- `security.mdc` — always on
-- `bugfix-and-qa.mdc` — always on
-- `keep-docs-in-sync.mdc` — always on (triggers doc sync after code changes)
-- `react-native.mdc` — `react-native/**`
-- `server.mdc` — `server/**`
+- `CLAUDE.md` (root) — always on: imports this `AGENTS.md`, adds DSA-applications, security, bug/Q&A, and doc-sync rules
+- `react_native/CLAUDE.md` — loaded under `react_native/**`; imports `react_native/AGENTS.md`
+- `server/CLAUDE.md` — loaded under `server/**`; imports `server/AGENTS.md`
 
 ## Skills
 
-- `update-docs-on-code-change` — sync README / AGENTS / feature docs / `.env.example` when code changes
+- `.claude/skills/update-docs-on-code-change` — sync README / AGENTS / feature docs / `.env.example` when code changes
 
 ## Suggested next steps (human)
 
 1. Add first paired demo (e.g. autocomplete: trie in `server/app/dsa/` + RN UI)
-2. Wire `EXPO_PUBLIC_API_URL=http://localhost:3000` in `react-native/.env`
-3. If `server/` is meant to live only in this monorepo, consider removing the nested `server/.git`
+2. Wire `EXPO_PUBLIC_API_URL=http://localhost:3000` in `react_native/.env`

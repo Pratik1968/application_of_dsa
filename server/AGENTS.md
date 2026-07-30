@@ -55,4 +55,4 @@ Mobile client should set `EXPO_PUBLIC_API_URL=http://localhost:3000` (use your m
 ## Monorepo
 
 - Root docs: `../README.md`, `../AGENTS.md`
-- After API/DSA changes, sync docs via `.cursor/skills/update-docs-on-code-change/`
+- After API/DSA changes, sync docs via `.claude/skills/update-docs-on-code-change/`
