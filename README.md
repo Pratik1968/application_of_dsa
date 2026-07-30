@@ -51,3 +51,7 @@ None yet. Planned first paired demo: autocomplete (trie on server + RN UI).
 - After feature/API changes, keep README and related docs in sync (agents use `.cursor/skills/update-docs-on-code-change/`).
 
 See [AGENTS.md](./AGENTS.md) for agent/contributor conventions.
+
+## Why this app
+
+The core intent of this application is to make data structures and algorithms tangible by grounding each one in a real-world use case rather than an isolated puzzle. Instead of teaching a trie, a heap, or a graph as an abstract exercise, we pair it with a product feature that actually needs it — autocomplete, a priority-based task queue, a recommendation feed, undo/redo, rate limiting, routing, offline sync — implemented end to end across the mobile client and the server. The goal is for anyone browsing this repo to see not just *how* a data structure works, but *why* it exists and *where* it shows up in software they use every day.
